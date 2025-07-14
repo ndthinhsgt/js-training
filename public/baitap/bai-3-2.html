@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../main.css">
+    <style>
+        #result {
+            background: #ccc;
+            border-radius: 5px;
+            padding: 5px;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Mảng dữ liệu</h3>
+
+    <h4>Tạo mảng</h4>
+    <pre id="description">
+        <div>- Mảng chứa các nhân viên: <code>employeeList</code> là chứa tên của nhân viên</div>
+        <div>- Thực hiện nội dung hàm <code>addEmployee</code> khi nhấn Thêm nhân viên</div>
+        <div>- Thực hiện nội dung hàm <code>removeEmployee</code> khi nhân Xoá</div>
+    </pre>
+
+    <hr />
+    <div>
+        <h4>Danh sách nhân viên</h4>
+        <input id="employee" placeholder="Nhập tên nhân viên" />
+        <button id="add-button" onclick="addEmployee()">Thêm Nhân Viên</button>
+    </div>
+
+    <div id="employee-list"></div>
+
+
+
+    <script>
+        // Làm ở đây
+        const employeeList = [];
+
+        function addEmployee() {
+            console.log("add-imployee")
+            // lấy value từ input 'employee'
+
+            // Kiểm tra nếu nhân viên đã tồn tại (có trong danh sách thì alert("đã có") không thêm nữa)
+
+            // Push vào list 'employeeList' hàm push
+
+            // Xoá nội dung input 'employee' (tức là set '' cho value của input)
+
+
+            // Phần này để xem thôi
+            renderList(); // hàm này xem cho biết
+        }
+
+        function removeEmployee(name) {
+            console.log("remove-imployee")
+            // Duyệt mảng 'employeeList'
+
+            // Kiểm tra xem nếu nhân viên có trong danh sách thì xoá
+            // tự research cách xoá 1 phần tử khõi array trong js
+
+            renderList(); // hàm này xem cho biết
+        }
+    </script>
+
+    <script>
+        // hàm này xem cho biết
+        function renderList() {
+            let html = "";
+            employeeList?.map((name, index) => {
+                html += `
+                <div style="margin: 5px;">
+                    <code>${name}</code>
+                    <button onclick="removeEmployee('${name}')">Xoa</button>
+                </div>`;
+            })
+            const root = document.getElementById("employee-list")
+            root.innerHTML = html
+        }
+    </script>
+
+</html>

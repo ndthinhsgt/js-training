@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../main.css">
+    <style>
+        #result {
+            background: #ccc;
+            border-radius: 5px;
+            padding: 5px;
+            margin-left: 5px;
+        }
+
+        .item {
+            background: #eee;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .item .item-label {
+            font-size: 20px;
+        }
+
+        .item .item-description {
+            font-size: 15px;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            cursor: pointer;
+            opacity: 80;
+        }
+
+        .btn {
+            opacity: 60;
+        }
+
+        .done {
+            border: green;
+            background: green;
+            color: white;
+        }
+
+        .undone {
+            border: red;
+            background: red;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Mảng dữ liệu & Object</h3>
+
+    <h4>Nội dung</h4>
+    <pre id="description">
+        - Mảng: <code>tasks</code> là chứa các tasks
+        - Mảng: <code>doneTasks</code> là chứa các tasks đã được đánh là done
+        - Mỗi phần tử của mảng là 1 object có key là: label: chuỗi, description: chuỗi
+    
+        <div>
+        Mô tả hoạt động:
+        - Khi thêm task thì label, description lấy từ form và được push vào tasks
+        - Khi done task thì task này bị xoá khõi tasks, và được push vào doneTasks
+        </div>
+
+    </pre>
+
+    <hr />
+    <h4>Mẫu 1 item HTML</h4>
+
+    <div class="item">
+        <div class="item-label">Title</div>
+        <div class="item-description">Description</div>
+        <button class="btn done">DONE</button>
+    </div>
+
+    <div class="item">
+        <div class="item-label">Title</div>
+        <div class="item-description">Description</div>
+        <button class="btn undone">UNDONE</button>
+    </div>
+
+    <hr />
+    <div>
+        <h4>TODO LIST</h4>
+        <input id="label" placeholder="Task Label" />
+        <input id="description" placeholder="Description" />
+        <button id="add-button" onclick="addTask()">Thêm task</button>
+    </div>
+
+    <hr />
+    <h4>Undone list</h4>
+    <div id="task-list-undone"></div>
+
+    <hr />
+    <h4>Done list</h4>
+    <div id="task-list-done"></div>
+
+    <script>
+        // Bài này không có bất kì gợi ý js nào cả xem nội dung rồi tự làm
+    </script>
+
+</html>
