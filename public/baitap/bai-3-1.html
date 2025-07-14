@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../main.css">
+    <style>
+        #result {
+            background: #ccc;
+            border-radius: 5px;
+            padding: 5px;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h4>Các phép tính trên 2 số</h4>
+    <hr>
+    <strong>Mô tả bài tập</strong>
+    <pre class="pre" id="description"></pre>
+    <hr>
+    <br><br><br>
+
+    <strong>Có form như sau: </strong>
+    <div style="padding: 5px;">
+        <input id="so-a" placeholder="Số A" />
+        <input id="so-b" placeholder="Số B" />
+        <div style="padding: 5px 0;">
+            <button id="sum-button" onclick="onSumButtonClick()">Tổng A + B</button>
+            <button>Hiệu A - B</button>
+            <button>Tích A x B</button>
+            <button>Thương A / B</button>
+        </div>
+    </div>
+    <div>
+        <strong>Kết quả</strong>
+        <span id="result">Kết quả ở đây</span>
+    </div>
+</body>
+
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("description").innerHTML = `
+Có 2 form có id là <code>so-a</code> và <code>so-b</code>, thực hiện các phép tính khi nhấn nút tương ứng và xuất kết quả
+- Khi nhấn <code>Tổng A + B</code> hiển thị kết quả a + b ở <code>result</code> <b class="success">(Đã làm mẫu)</b>
+- Khi nhấn <code>Hiệu A - B</code> hiển thị kết quả a - b ở <code>result</code>
+- Khi nhấn <code>Tích A x B</code> hiển thị kết quả a * b ở <code>result</code>
+- Khi nhấn <code>Thương A / B</code> hiển thị kết quả a / b ở <code>result</code>
+  - Lưu ý khi a / b thì b phải khác 0 vì chia 0 sẽ bị lỗi`
+    })
+</script>
+
+<script>
+    // HƯỚNG DẪN
+    // Mỗi button viết trong 1 thẻ <script><//script>
+
+    // Hàm tính tổng 2 số
+    function tongHaiSo(soA, soB) {
+        return soA + soB // trả về kết quả a + b
+    }
+
+    // Hàm được button `Tổng A + B` dùng
+    function onSumButtonClick() {
+        // khởi tạo biến soA, do không có set lại giá trị nên dùng const
+        const soA = document.getElementById("so-a");
+        // khởi tạo biến soB, do không có set lại giá trị nên dùng const
+        const soB = document.getElementById("so-b");
+
+        // khởi tạo biến soAValue, dùng let vì cần format thành number
+        let soAValue = soA.value;
+        if (typeof soAValue == "string") { // Nếu là chuỗi
+            soAValue = parseInt(soAValue) // thì parse sang int (integer: số nguyên)
+        }
+
+        // khởi tạo biến soBValue, dùng let vì cần format thành number
+        let soBValue = soB.value;
+        if (typeof soBValue == "string") { // Nếu là chuỗi
+            soBValue = parseInt(soBValue) // thì parse sang int (integer: số nguyên)
+        }
+
+        const resultValue = tongHaiSo(soAValue, soBValue) // gọi hàm tính tổng 2 số
+        const result = document.getElementById("result"); // lấy result element
+        if (isNaN(resultValue)) {
+            result.innerHTML = `${resultValue} (Not a Number)`
+        } else {
+            result.innerHTML = resultValue // ghi kết quả ra màn hình
+        }
+        // nhớ set hàm vào button onclick
+    }
+
+
+    // Ví dụ về dùng addEventListener
+    // const sumButton = document.getElementById("sum-button")
+    // sumButton.addEventListener("click", onSunButtonClick);
+</script>
+
+</html>

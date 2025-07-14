@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+  <h1>Buổi 2</h1>
+  // 1. Biến và kiểu dữ liệu <br />
+  // var => variable dùng để báo cho máy biết mình sẽ sử dụng biến này <br />
+  // let => biến cục bộ, chỉ sử dụng trong phạm vi của nó <br />
+  // const => constant, biến không thay đổi được giá trị, chỉ sử dụng trong phạm vi <br />
+  var ten_bien = null; <br />
+  var ten_bien2; <br />
+  let boolean_bien = false; // const => constant <br />
+  var number_bien = 123.456; <br />
+  var bigint_bien = "123.456"; <br />
+  var string_bien = `String`; <br />
+  console.log("type", string_bien); <br />
+  <br />
+  // Xem thêm về object và array <br />
+  // Object / đối tượng là một kiểu dữ liệu đặc biệt trong JavaScript, nó là một tập hợp các cặp key-value <br />
+  const obj = { label: "Hom nay an gi", options: ["Banh mi", "My goi"] }; <br />
+
+  // Array / mảng là một kiểu dữ liệu đặc biệt trong JavaScript, nó là một tập hợp các giá trị dưới dạng danh sách
+  <br />
+  console.log("log Object", obj); <br />
+
+  // 2. Toán tủ + - * / %, >
+  <=,==,===, !=, !==, &&, ||, ! <br />
+  console.log("toán tử", 1 > 2 || 2
+  < 3); <br />
+  <br />
+  // 3. if else (if => nếu thì, elsse => nếu không thì) <br />
+  if (1 > 2) { <br />
+  // nếu 1 lớn hơn 2 thì log "1 lớn hơn 2" <br />
+  console.log("1 lớn hơn 2"); <br />
+  } else { <br />
+  // nếu không thì log "1 không lớn hơn 2" <br />
+  console.log("1 không lớn hơn 2"); <br />
+  } <br />
+  <br />
+  // 4. for while <br />
+  // for => vòng lặp, sẽ lặp lại cho đến khi nào điều kiện không còn đúng nữa <br />
+  // for (tạo biến, điều kiện chạy tiếp, thay đổi biến) <br />
+  // nếu biến không thay đổi vòng lặp sẽ chạy mãi mãi => nên tránh <br />
+  for (let i = 0; i
+  < 10; i++) { <br />
+  // vòng lặp chạy từ 0 đến 9 (không có 10 vì
+  < 10) <br />
+  if (i == 5) { <br />
+  // nếu i bằng 5 thì bỏ qua vòng lặp này và chạy vòng lặp i = 6 <br />
+  continue; <br />
+  } <br />
+  if (i == 7) { <br />
+  // nếu i bằng 7 thì dừng vòng lặp <br />
+  break; <br />
+  } <br />
+  console.log("i", i); <br />
+  } <br />
+  <br />
+  // white là vòng lặp chạy trên điều kiện, đôi khi người ta sẽ muốn lặp lại mãi cho đến khi đạt được yêu cầu <br />
+  // ví dụ bắt người dùng nhập email (có chứa @) => nếu không có @ thì người dùng sẽ phải nhập mãi mãi cho đến khi có @
+  <br />
+  let i = 0; <br />
+  while (obj.label == "555555") { <br />
+  i++; <br />
+  console.log("while", i); <br />
+  obj.label = "123456"; <br />
+  } <br />
+  <br />
+  // Lưu ý khi dùng for / while vòng lặp rất dễ dẫn đến vĩnh viễn gọi là infinite loop <br />
+  // vì vậy trong các logic phức tạp hoặc không rõ nghĩa người ta sẽ tạo ra 1 giới hạn <br />
+  // ví dụ như: <br />
+  // ví dụ bắt người dùng nhập email (có chứa @) => nếu không có @ thì người dùng sẽ phải nhập mãi mãi cho đến khi có @
+  <br />
+  // nhưng nếu người dùng không bao giờ bấm @ thì sẽ không bao giờ dừng lại <br />
+  // vì vậy người ta sẽ tạo ra 1 giới hạn như sau <br />
+  let email = prompt("Nhập email của bạn: "); // thiếu @ <br />
+  let limit = 0; <br />
+  const maxTry = 3; // tối đa 3 lần <br />
+  while (!email.includes("@")) { <br />
+  // giả sử người dùng nhập email mới <br />
+  email = prompt("Vui lòng nhập email có chứa @: "); <br />
+  limit++; <br />
+  if (limit >= maxTry) { <br />
+  alert("Xin lỗi, bạn đã nhập quá số lần cho phép, làm ơn thử lại sau"); <br />
+  break; <br />
+  } <br />
+  } <br />
+  <br />
+  // Giới thiệu thêm 1 số thứ thường dùng <br />
+  console.log("nội dung 1", "nội dung 2") // log ra console <br />
+  alert("nội dung") <br />
+  <br />
+  <script>
+    // 1. Biến và kiểu dữ liệu
+    // var => variable dùng để báo cho máy biết mình sẽ sử dụng biến này
+    // let => biến cục bộ, chỉ sử dụng trong phạm vi của nó
+    // const => constant, biến không thay đổi được giá trị, chỉ sử dụng trong phạm vi
+    var ten_bien = null;
+    var ten_bien2;
+    let boolean_bien = false; // const => constant
+    var number_bien = 123.456;
+    var bigint_bien = "123.456";
+    var string_bien = `String`;
+    console.log("type", string_bien);
+
+    // Xem thêm về object và array
+    // Object / đối tượng là một kiểu dữ liệu đặc biệt trong JavaScript, nó là một tập hợp các cặp key-value
+    const obj = { label: "Hom nay an gi", options: ["Banh mi", "My goi"] };
+
+    // Array / mảng là một kiểu dữ liệu đặc biệt trong JavaScript, nó là một tập hợp các giá trị dưới dạng danh sách
+    console.log("log Object", obj);
+
+    // 2. Toán tủ + - * / %, ><=, ==, ===, !=, !==, &&, ||, !
+    console.log("toán tử", 1 > 2 || 2 < 3);
+
+    // 3. if else (if => nếu thì, elsse => nếu không thì)
+    if (1 > 2) {
+      // nếu 1 lớn hơn 2 thì log "1 lớn hơn 2"
+      console.log("1 lớn hơn 2");
+    } else {
+      // nếu không thì log "1 không lớn hơn 2"
+      console.log("1 không lớn hơn 2");
+    }
+
+    // 4. for while
+    // for => vòng lặp, sẽ lặp lại cho đến khi nào điều kiện không còn đúng nữa
+    // for (tạo biến, điều kiện chạy tiếp, thay đổi biến)
+    // nếu biến không thay đổi vòng lặp sẽ chạy mãi mãi => nên tránh
+    for (let i = 0; i < 10; i++) {
+      // vòng lặp chạy từ 0 đến 9 (không có 10 vì < 10)
+      if (i == 5) {
+        // nếu i bằng 5 thì bỏ qua vòng lặp này và chạy vòng lặp i = 6
+        continue;
+      }
+      if (i == 7) {
+        // nếu i bằng 7 thì dừng vòng lặp
+        break;
+      }
+      console.log("i", i);
+    }
+
+    // white là vòng lặp chạy trên điều kiện, đôi khi người ta sẽ muốn lặp lại mãi cho đến khi đạt được yêu cầu
+    // ví dụ bắt người dùng nhập email (có chứa @) => nếu không có @ thì người dùng sẽ phải nhập mãi mãi cho đến khi có @
+    let i = 0;
+    while (obj.label == "555555") {
+      i++;
+      console.log("while", i);
+      obj.label = "123456";
+    }
+
+    // Lưu ý khi dùng for / while vòng lặp rất dễ dẫn đến vĩnh viễn gọi là infinite loop
+    // vì vậy trong các logic phức tạp hoặc không rõ nghĩa người ta sẽ tạo ra 1 giới hạn
+    // ví dụ như:
+    // ví dụ bắt người dùng nhập email (có chứa @) => nếu không có @ thì người dùng sẽ phải nhập mãi mãi cho đến khi có @
+    // nhưng nếu người dùng không bao giờ bấm @ thì sẽ không bao giờ dừng lại
+    // vì vậy người ta sẽ tạo ra 1 giới hạn như sau
+    let email = prompt("Nhập email của bạn: "); // thiếu @
+    let limit = 0;
+    const maxTry = 3; // tối đa 3 lần
+    while (!email.includes("@")) {
+      // giả sử người dùng nhập email mới
+      email = prompt("Vui lòng nhập email có chứa @: ");
+      limit++;
+      if (limit >= maxTry) {
+        alert("Xin lỗi, bạn đã nhập quá số lần cho phép, làm ơn thử lại sau");
+        break;
+      }
+    }
+  </script>
+</body>
+
+</html>

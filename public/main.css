@@ -1,0 +1,41 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  background: #eee;
+  padding: 5px;
+  height: 30px;
+  line-height: 30px;
+}
+
+code {
+  font-size: 14px;
+  color: red;
+  padding: 3px;
+  background: #eee;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+}
+
+button {
+  height: 26px;
+}
+
+input {
+  height: 24px;
+}
+
+.pre {
+  white-space: pre;
+  line-height: 24px;
+}
+
+.des {
+  padding-left: 20px;
+}
+
+.success {
+  color: green
+}

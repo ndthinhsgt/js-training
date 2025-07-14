@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buổi 1</title>
+    <link rel="stylesheet" href="./main.css">
+    <style>
+        /* Chung */
+        .button {
+            height: 30px;
+            padding: 5px 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            opacity: 0.8;
+        }
+
+        .button:active {
+            opacity: 0.6;
+        }
+
+        .input {
+            width: 100%;
+        }
+    </style>
+    <style>
+        /* Page */
+        .center {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Buổi 1</h1>
+    <h3># Nội dung</h3>
+    <h4>HTML CSS</h4>
+    <p>Giới thiệu về html, css ..., giới thiệu về form, ...</p>
+    <ul>
+        <li> DIV</li>
+        <li> H 1 ... 6</li>
+        <li> FORM</li>
+        <li> INPUT text, radio</li>
+        <li> LABEL cho radio</li>
+        <li> SELECT/OPTIONs</li>
+        <li> TEXTAREA</li>
+        <li> BUTTON</li>
+        <li> effect hover, focus, active, disabled</li>
+    </ul>
+
+    <h4>JS</h4>
+    <ul>
+        <li> JS là gì, cách import js vào html</li>
+    </ul>
+    <hr />
+    Một số ví dụ
+
+    <h5>1 Block bình thường</h5>
+    <div style="height: 100px; border: 1px solid black"></div>
+
+    <h5>Demo form</h5>
+    <form>
+        <fieldset>
+            <legend>Form</legend>
+
+            <div>
+                <h6>Radio</h6>
+                <div>radio name phải giống nhau và có [], ví dụ radio[]</div>
+                <input type="radio" name="cheese[]" id="cheese1" checked />
+                <label for="cheese1">Do you like cheese 1?</label>
+                <br />
+                <input type="radio" name="cheese[]" id="cheese2" />
+                <label for="cheese2">Do you like cheese 2?</label>
+                <br />
+                <input type="radio" name="cheese[]" id="cheese3" />
+                <label for="cheese3">Do you like cheese 3?</label>
+                <br />
+            </div>
+
+            <div>
+                <h6>Radio</h6>
+                <div>radio name phải giống nhau và có [], ví dụ radio[]</div>
+                <input type="checkbox" name="cheese[]" id="cheese11" />
+                <label for="cheese11">Do you like cheese 1?</label>
+                <br />
+                <input type="checkbox" name="cheese[]" id="cheese21" />
+                <label for="cheese21">Do you like cheese 2?</label>
+                <br />
+                <input type="checkbox" name="cheese[]" id="cheese31" />
+                <label for="cheese31">Do you like cheese 3?</label>
+                <br />
+            </div>
+            <hr />
+            <label for="pet-select">Choose a pet:</label>
+
+            <select name="pets" id="pet-select">
+                <option value="">--Please choose an option--</option>
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="hamster">Hamster</option>
+                <option value="parrot" selected="parrot">Parrot</option>
+                <option value="spider">Spider</option>
+                <option value="goldfish">Goldfish</option>
+            </select>
+            <hr />
+            <textarea></textarea>
+            <br />
+
+            <button type="reset" class="button">Reset</button>
+            <button type="submit">Submit</button>
+
+            <input type="reset" value="Reset" />
+            <input type="submit" value="Submit" />
+        </fieldset>
+    </form>
+
+    <div class="center">
+        <form style="width: 300px;">
+            <input class="input">
+            <input class="input">
+        </form>
+    </div>
+    <script src=""></script>
+    <script src=""></script>
+</body>
+
+</html>

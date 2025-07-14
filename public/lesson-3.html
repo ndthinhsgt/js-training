@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+    <pre>
+- Array: keyword: <code>[]</code>, ['1', 1, false] => index chỉ số vị trí
+    - Chỉ số vị trí trong js luôn bắt đầu từ 0, nếu dùng delete thì mảng sẽ bị mất chỉ số, nếu dùng các hàm khác thì chỉ số sẽ được đánh lại
+- Object: keyword <code>{}</code>, {name: 'thinh', age: 18, male: false}
+    - Bộ {key: value}
+- Function: hàm keyword <code>function</code>
+    - DOM: Document Object Modal với đại diện là document
+</pre>
+
+    <style>
+        .hide {
+            display: none
+        }
+    </style>
+
+    <select id="select" onchange="handleSelectValue(this)">
+        <option></option>
+        <option>huy</option>
+        <option>thinh</option>
+        <option>quynh</option>
+    </select>
+    <button id="button" class="hide">dung id </button>
+    <button onclick="buttonSelect()" class="hide"> dung function</button>
+
+    <hr>
+    <script>
+        // const arr = [1, 2, 3]
+        // const brr = [4, 5, 6]
+
+        // function log_mang(arr, brr) {
+        //     for (let i = 0; i < arr.length; i++) {
+        //         console.log("arr", i, arr[i])
+        //     }
+        //     for (let i = 0; i < brr.length; i++) {
+        //         console.log("brr", i, brr[i])
+        //     }
+        // }
+
+        // log_mang(brr, arr)
+        //     const mangso = ['1', 1, false]
+
+        //     for(let i =0; i < mangso.length; i++ ) {
+        //         console.log("arr",i, mangso[i])
+        //     }
+        //   console.log('------')
+        //     for(let i in mangso) {
+        //         console.log('array index', i)
+        //     }
+        //      console.log('------')
+        //     for(let i of mangso) {
+        //         console.log('array value', i)
+        //     }
+        //  console.log('------')
+        //     mangso.forEach((value, index) => {
+        //           console.log('value', value, 'index', index)
+        //     })
+
+        // console.log('------')
+        // const matrixLevel2 = [
+        //     ['1', 1, false],
+        //     ['2', 2, true],
+        //     ['1', 1, false]
+        // ];
+
+        // for (let i = 0; i < matrixLevel2.length; i++) {
+        //     for (let j = 0; j < matrixLevel2[i].length; j++) {
+        //         console.log("arr", i, j, matrixLevel2[i][j])
+        //     }
+        // }
+        // const test = false;
+        // test = true
+        // const arr = [3, 4,5, false, true]
+        // const obj = { name: "thinh", age: "18"}
+
+        // arr = [];
+
+        // arr.push(1)
+        // obj.name = "thinh dep trai"
+
+        // console.log(obj, arr)
+
+        // console.log(document)
+        // const select = document.getElementById("select")
+        // const button = document.getElementById("button")
+
+        // function buttonSelect() {
+        //     const select = document.getElementById("select")
+        //     console.log(select)
+        //     alert("Ban da chon " + select.value)
+        // }
+
+        // button.addEventListener("click", () => {
+        //     const select = document.getElementById("select")
+        //     console.log(select)
+        //     alert("Ban da chon" + select.value)
+        //     window.location.href = "./" // redirect to "/"
+        // })
+
+        // function handleSelectValue(e) {
+        //     console.log(e.value)
+        //     button.className = ""
+        // }
+
+        function sum() {
+            const result = document.getElementById("sum-result")
+            // todo
+            result.innerText = "12"
+        }
+    </script>
+</body>
+
+</html>

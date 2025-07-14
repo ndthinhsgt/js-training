@@ -1,0 +1,23 @@
+{
+  "name": "js-training",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ndthinhsgt/js-training.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ndthinhsgt/js-training/issues"
+  },
+  "homepage": "https://github.com/ndthinhsgt/js-training#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
