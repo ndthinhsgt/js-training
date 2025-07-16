@@ -29,7 +29,7 @@
     <hr />
     <div>
         <h4>Danh sách nhân viên</h4>
-        <input id="employee" placeholder="Nhập tên nhân viên" />
+        <input type="search" id="employee" placeholder="Nhập tên nhân viên" />
         <button id="add-button" onclick="addEmployee()">Thêm Nhân Viên</button>
     </div>
 
@@ -39,18 +39,32 @@
 
     <script>
         // Làm ở đây
-        const employeeList = [];
+        let employeeList = [];
 
         function addEmployee() {
             console.log("add-imployee")
             // lấy value từ input 'employee'
+            const employee = document.getElementById("employee")
+            const employeeValue = employee.value
 
             // Kiểm tra nếu nhân viên đã tồn tại (có trong danh sách thì alert("đã có") không thêm nữa)
+            let tim = false; // tim = false là tìm không thấy, nếu true là thấy
+            for (let i = 0; i < employeeList.length; i++) {
+                const item = employeeList[i]
+                if (item == employeeValue) {
+                    tim = true;
+                }
+            }
+
+            if (tim) {
+                return;
+            }
 
             // Push vào list 'employeeList' hàm push
+            employeeList.push(employeeValue)
 
             // Xoá nội dung input 'employee' (tức là set '' cho value của input)
-
+            employee.value = ""
 
             // Phần này để xem thôi
             renderList(); // hàm này xem cho biết
@@ -59,7 +73,24 @@
         function removeEmployee(name) {
             console.log("remove-imployee")
             // Duyệt mảng 'employeeList'
-
+            let tim = -1; // tim = -1 là tìm không thấy, nếu > -1 là thấy
+            const newList = [];
+            for (let i = 0; i < employeeList.length; i++) {
+                const item = employeeList[i]
+                console.log(item, name, newList)
+                if (item === name) {
+                    //tim = i;
+                    continue;
+                }
+                newList.push(item)
+            }
+            employeeList = newList
+            // if (tim == -1) {
+            //     console.log("tim khono thay")
+            // } else {
+            //     //delete employeeList[tim]
+            //     employeeList
+            // }
             // Kiểm tra xem nếu nhân viên có trong danh sách thì xoá
             // tự research cách xoá 1 phần tử khõi array trong js
 
@@ -71,6 +102,7 @@
         // hàm này xem cho biết
         function renderList() {
             let html = "";
+            employeeList.find
             employeeList?.map((name, index) => {
                 html += `
                 <div style="margin: 5px;">
@@ -82,5 +114,4 @@
             root.innerHTML = html
         }
     </script>
-
 </html>

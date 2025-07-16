@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+    <style>
+        .show {
+            display: visible
+        }
+
+        .hide {
+            display: none
+        }
+
+        .bg-red {
+            background: red;
+            color: white;
+            padding-top: 20px
+        }
+    </style>
+    <h4>Hướng dẫn dùng 1 số DOM</h4>
+    <pre>
+  - Sự kiện trong JS: onclick, addEventListener, onchange, oninput
+  - Hiện/ẩn nội dung bằng JS
+    - có 2 cách là set innerHtml, hoặc là viết class ẩn hiện
+  - Làm nút đổi màu, bật/tắt đèn, hiện/ẩn khối nội dung
+</pre>
+
+    <form onsubmit="console.log('vua submit nha')">
+        <!-- <input name="name" onchange="console.log('change')" oninput="console.log('input')"
+            onfocus="console.log('focus')" onblur="console.log('blur')" /> -->
+        <button id="btn" type="button">Button</button>
+    </form>
+
+
+
+    <hr>
+    ẩn hiện khối nội dung
+    <div id="render" class="render render2">
+        <b>BOLD TEXT</b>
+    </div>
+
+
+    <hr />
+    làm nút đổi màu
+    <button id="btn-test" type="button">test</button>
+
+    <hr />
+    <script>
+        function $(id) {
+            return document.querySelector(id);
+        }
+
+        const button = document.querySelector("#btn");
+        const render = document.querySelector("#render");
+
+        button.addEventListener("click", () => {
+            // ẩn hiện khối nội dung
+            // if (render.classList.contains("hide")) {
+            //     render.classList.remove("hide")
+            //     render.classList.add("show")
+            // } else {
+            //     render.classList.remove("show")
+            //     render.classList.add("hide")
+            // }
+
+            // làm nút đổi màu
+            const btnTest = document.querySelector("#btn-test");
+            //btnTest.classList.add("bg-red") // dùng class
+            btnTest.style.paddingTop = "20px";
+        })
+
+
+    </script>
+</body>
+
+</html>

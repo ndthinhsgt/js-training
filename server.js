@@ -6,6 +6,10 @@ const PORT = 3999;
 // Serve file tĩnh trong thư mục "public"
 app.use(express.static(path.join(__dirname, "public")));
 
+app.get("/test", (req, res) => {
+  return "ok";
+});
+
 app.listen(PORT, () => {
   console.log(`Server đang chạy tại http://localhost:${PORT}`);
 });
